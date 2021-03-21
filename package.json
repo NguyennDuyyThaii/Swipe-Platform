@@ -1,0 +1,23 @@
+{
+    "name": "swipe-platform",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node src/index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/NguyennDuyyThaii/Swipe-Platform.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/NguyennDuyyThaii/Swipe-Platform/issues"
+    },
+    "homepage": "https://github.com/NguyennDuyyThaii/Swipe-Platform#readme",
+    "dependencies": {
+        "express": "^4.17.1"
+    }
+}
