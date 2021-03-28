@@ -12,84 +12,92 @@
     <link href="css/swipe.min.css" type="text/css" rel="stylesheet">
     <!-- Favicon -->
     <link href="img/favicon.png" type="image/png" rel="icon">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css" />
 </head>
 
 <body>
     <main>
-        <div class="layout">
-            <!-- Start of Navigation -->
-            <%- include("navigation") %>
-                <!-- End of Navigation -->
-                <!-- Start of Sidebar -->
-                <%- include("sidebar") %>
-                    <!-- End of Sidebar -->
-                    <!-- Start of Add Friends -->
-                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="requests">
-                                <div class="title">
-                                    <h1>Add your friends</h1>
-                                    <button type="button" class="btn" data-dismiss="modal" aria-label="Close"><i class="material-icons">close</i></button>
-                                </div>
-                                <div class="content">
-                                    <form>
-                                        <div class="form-group">
-                                            <label for="user">Username:</label>
-                                            <input type="text" class="form-control" id="user" placeholder="Add recipient..." required>
-                                            <div class="user" id="contact">
-                                                <img class="avatar-sm" src="dist/img/avatars/avatar-female-5.jpg" alt="avatar">
-                                                <h5>Keith Morris</h5>
-                                                <button class="btn"><i class="material-icons">close</i></button>
+        <% if(success != ""){%>
+            <% success.forEach(item => { %>
+                <div class="master-sucess-message alert alert-success">
+                    <%-item  %>
+                </div>
+                <%}) %>
+                    <%} %>
+                        <div class="layout">
+                            <!-- Start of Navigation -->
+                            <%- include("navigation") %>
+                                <!-- End of Navigation -->
+                                <!-- Start of Sidebar -->
+                                <%- include("sidebar") %>
+                                    <!-- End of Sidebar -->
+                                    <!-- Start of Add Friends -->
+                                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="requests">
+                                                <div class="title">
+                                                    <h1>Add your friends</h1>
+                                                    <button type="button" class="btn" data-dismiss="modal" aria-label="Close"><i class="material-icons">close</i></button>
+                                                </div>
+                                                <div class="content">
+                                                    <form>
+                                                        <div class="form-group">
+                                                            <label for="user">Username:</label>
+                                                            <input type="text" class="form-control" id="user" placeholder="Add recipient..." required>
+                                                            <div class="user" id="contact">
+                                                                <img class="avatar-sm" src="dist/img/avatars/avatar-female-5.jpg" alt="avatar">
+                                                                <h5>Keith Morris</h5>
+                                                                <button class="btn"><i class="material-icons">close</i></button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="welcome">Message:</label>
+                                                            <textarea class="text-control" id="welcome" placeholder="Send your welcome message...">Hi Keith, I'd like to add you as a contact.</textarea>
+                                                        </div>
+                                                        <button type="submit" class="btn button w-100">Send Friend Request</button>
+                                                    </form>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="welcome">Message:</label>
-                                            <textarea class="text-control" id="welcome" placeholder="Send your welcome message...">Hi Keith, I'd like to add you as a contact.</textarea>
-                                        </div>
-                                        <button type="submit" class="btn button w-100">Send Friend Request</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End of Add Friends -->
-                    <!-- Start of Create Chat -->
-                    <div class="modal fade" id="startnewchat" tabindex="-1" role="dialog" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="requests">
-                                <div class="title">
-                                    <h1>Start new chat</h1>
-                                    <button type="button" class="btn" data-dismiss="modal" aria-label="Close"><i class="material-icons">close</i></button>
-                                </div>
-                                <div class="content">
-                                    <form>
-                                        <div class="form-group">
-                                            <label for="participant">Recipient:</label>
-                                            <input type="text" class="form-control" id="participant" placeholder="Add recipient..." required>
-                                            <div class="user" id="recipient">
-                                                <img class="avatar-sm" src="dist/img/avatars/avatar-female-5.jpg" alt="avatar">
-                                                <h5>Keith Morris</h5>
-                                                <button class="btn"><i class="material-icons">close</i></button>
+                                    </div>
+                                    <!-- End of Add Friends -->
+                                    <!-- Start of Create Chat -->
+                                    <div class="modal fade" id="startnewchat" tabindex="-1" role="dialog" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="requests">
+                                                <div class="title">
+                                                    <h1>Start new chat</h1>
+                                                    <button type="button" class="btn" data-dismiss="modal" aria-label="Close"><i class="material-icons">close</i></button>
+                                                </div>
+                                                <div class="content">
+                                                    <form>
+                                                        <div class="form-group">
+                                                            <label for="participant">Recipient:</label>
+                                                            <input type="text" class="form-control" id="participant" placeholder="Add recipient..." required>
+                                                            <div class="user" id="recipient">
+                                                                <img class="avatar-sm" src="dist/img/avatars/avatar-female-5.jpg" alt="avatar">
+                                                                <h5>Keith Morris</h5>
+                                                                <button class="btn"><i class="material-icons">close</i></button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="topic">Topic:</label>
+                                                            <input type="text" class="form-control" id="topic" placeholder="What's the topic?" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="message">Message:</label>
+                                                            <textarea class="text-control" id="message" placeholder="Send your welcome message...">Hmm, are you friendly?</textarea>
+                                                        </div>
+                                                        <button type="submit" class="btn button w-100">Start New Chat</button>
+                                                    </form>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="topic">Topic:</label>
-                                            <input type="text" class="form-control" id="topic" placeholder="What's the topic?" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="message">Message:</label>
-                                            <textarea class="text-control" id="message" placeholder="Send your welcome message...">Hmm, are you friendly?</textarea>
-                                        </div>
-                                        <button type="submit" class="btn button w-100">Start New Chat</button>
-                                    </form>
-                                </div>
-                            </div>
+                                    </div>
+                                    <!-- End of Create Chat -->
+                                    <%- include("main") %>
                         </div>
-                    </div>
-                    <!-- End of Create Chat -->
-                    <%- include("main") %>
-        </div>
-        <!-- Layout -->
+                        <!-- Layout -->
     </main>
     <!-- Bootstrap/Swipe core JavaScript
 		================================================== -->
