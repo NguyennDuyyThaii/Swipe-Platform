@@ -26,8 +26,16 @@ let Registermailer = {
     account_actived: "Kích hoạt tài khoản thành công, Bạn có thể đăng nhập",
     logout_success: "Đăng xuất tài khoản thành công!"
 }
-
+let transPassport = {
+    server_error: "Có lỗi ở phía Server, Vui lòng đăng nhập hoặc trở lại sau, cảm ơn.",
+    login_failed: "Tài khoản hoặc mật khẩu không chính xác, hãy kiểm tra lại!",
+    account_not_active: "Tài khoản này đã được đăng kí nhưng chưa được ACTIVE, kiểm tra email của bạn",
+    login_success: (username) => {
+        return `Xin chào <strong>${username}</strong>, Chúc bạn một ngày tốt lành!`
+    }
+}
 module.exports = {
     transUserLoginRegister: transUserLoginRegister,
-    Registermailer: Registermailer
+    Registermailer: Registermailer,
+    transPassport: transPassport
 }

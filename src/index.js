@@ -4,7 +4,7 @@ const connectDB = require("./configs/connectDB");
 const session = require("./configs/session")
 const connectFlash = require("connect-flash")
 const bodyParser = require("body-parser")
-
+const passport = require("passport");
 const express = require("express");
 const app = express();
 /**
@@ -25,8 +25,13 @@ configViewEngine(app);
 
 app.use(bodyParser.urlencoded({ extend: true }))
     /**
-     * connect-flash
+     * passport
      */
+app.use(passport.initialize());
+app.use(passport.session());
+/**
+ * connect-flash
+ */
 app.use(connectFlash())
     /**
      * routes
