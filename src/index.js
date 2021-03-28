@@ -23,10 +23,10 @@ configViewEngine(app);
  * config body-parser
  */
 
-app.use(bodyParser.urlencoded({ extend: true }))
-    /**
-     * passport
-     */
+app.use(express.urlencoded({ extended: true }));
+/**
+ * passport
+ */
 app.use(passport.initialize());
 app.use(passport.session());
 /**

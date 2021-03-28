@@ -32,7 +32,8 @@ let transPassport = {
     account_not_active: "Tài khoản này đã được đăng kí nhưng chưa được ACTIVE, kiểm tra email của bạn",
     login_success: (username) => {
         return `Xin chào <strong>${username}</strong>, Chúc bạn một ngày tốt lành!`
-    }
+    },
+    logout_success: "Đăng xuất tài khoản thành công, hẹn gặp lại!"
 }
 module.exports = {
     transUserLoginRegister: transUserLoginRegister,
