@@ -1,0 +1,100 @@
+<div class="tab-pane fade" id="settings">
+    <div class="settings">
+        <div class="profile">
+            <img class="avatar-xl" src="dist/img/avatars/avatar-male-1.jpg" alt="avatar">
+            <h1><a href="#">Michael Knudsen</a></h1>
+            <span>Helena, Montana</span>
+        </div>
+        <div class="categories" id="accordionSettings">
+            <h1>Settings</h1>
+            <!-- Start of My Account -->
+            <div class="category">
+                <a href="#" class="title collapsed" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <i class="material-icons md-30 online">person_outline</i>
+                    <div class="data">
+                        <h5>Change Infomation</h5>
+                        <p>Update your profile details</p>
+                    </div>
+                    <i class="material-icons">keyboard_arrow_right</i>
+                </a>
+                <div class="collapse" id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionSettings">
+                    <div class="content">
+                        <div class="upload">
+                            <div class="data">
+                                <img class="avatar-xl" src="dist/img/avatars/avatar-male-1.jpg" alt="image">
+                                <label>
+                                    <input type="file">
+                                    <span class="btn button">Upload avatar</span>
+                                </label>
+                            </div>
+                            <p>For best results, use an image at least 256px by 256px in either .jpg or .png format!</p>
+                        </div>
+                        <form>
+                            <div class="parent">
+                                <div class="field">
+                                    <label for="firstName">First name <span>*</span></label>
+                                    <input type="text" class="form-control" id="firstName" placeholder="First name" value="Michael" required>
+                                </div>
+                                <div class="field">
+                                    <label for="lastName">Last name <span>*</span></label>
+                                    <input type="text" class="form-control" id="lastName" placeholder="Last name" value="Knudsen" required>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="email">Email <span>*</span></label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email address" value="michael@gmail.com" required>
+                            </div>
+                            <div class="field">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="Enter a new password" value="password" required>
+                            </div>
+                            <div class="field">
+                                <label for="location">Location</label>
+                                <input type="text" class="form-control" id="location" placeholder="Enter your location" value="Helena, Montana" required>
+                            </div>
+                            <button type="button" class="btn button w-100">Apply</button><br>
+                            <button type="button" class="btn button w-100" style="background:red;">Reset</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="category">
+                <a href="#" class="title collapsed" id="headingSix" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                    <i class="material-icons md-30 online">language</i>
+                    <div class="data">
+                        <h5>Change Password</h5>
+                        <p>Select preferred language</p>
+                    </div>
+                    <i class="material-icons">keyboard_arrow_right</i>
+                </a>
+                <div class="collapse" id="collapseSix" aria-labelledby="headingSix" data-parent="#accordionSettings">
+                    <div class="content layer">
+                        <div class="language">
+                            <div class="field">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="Enter a new password" value="password" required>
+                            </div>
+                            <div class="field">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="Enter a new password" value="password" required>
+                            </div>
+                            <button type="button" class="btn button w-100">Apply</button><br>
+                            <button type="button" class="btn button w-100" style="background:red;">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="category">
+                <a href="#" class="title collapsed">
+                    <i class="material-icons md-30 online">power_settings_new</i>
+                    <div class="data">
+                        <h5>Power Off</h5>
+                        <p>Log out of your account</p>
+                    </div>
+                    <i class="material-icons">keyboard_arrow_right</i>
+                </a>
+            </div>
+            <!-- End of Logout -->
+        </div>
+    </div>
+</div>
