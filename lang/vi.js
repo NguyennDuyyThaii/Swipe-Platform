@@ -35,8 +35,17 @@ let transPassport = {
     },
     logout_success: "Đăng xuất tài khoản thành công, hẹn gặp lại!"
 }
+
+let transUpdateUser = {
+    user_password: "Chúc mừng bạn cập nhập mật khẩu thành công",
+    account_undefined: "Oop, Tài khoản không tồn tại, có lỗi đăng nhập rồi!",
+    old_password_failed: "Mật khẩu hiện tại không chính xác, hãy kiểm tra lại!",
+    old_password: "Mật khẩu phải có ít nhất 8 kí tự, bao gồm chữ hoa, chữ thường!",
+    re_new_password: "Nhập lại mật khẩu mới chưa chính xác, bạn hãy nhập lại"
+}
 module.exports = {
     transUserLoginRegister: transUserLoginRegister,
     Registermailer: Registermailer,
-    transPassport: transPassport
+    transPassport: transPassport,
+    transUpdateUser: transUpdateUser
 }
