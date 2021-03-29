@@ -1,5 +1,5 @@
 const { login, register } = require('./../controllers/AuthController/index')
-const { home } = require('./../controllers/SiteController/index')
+const { home, user } = require('./../controllers/SiteController/index')
 const initPassportLocal = require("./../controllers/PassportController/local")
 
 /**
@@ -23,16 +23,17 @@ let initRouter = (app) => {
     router.post('/register', home.checkLoggedOut, userRegister.userRegister, register.postRegister);
     router.get('/verify/:token', home.checkLoggedOut, register.verify)
     router.post('/login', home.checkLoggedOut, passport.authenticate("local", {
-        successRedirect: "/",
-        failureRedirect: "/login",
-        successFlash: true,
-        failureFlash: true
-    }))
-    router.get('/logout', home.checkloggedIn, home.getLogout)
+            successRedirect: "/",
+            failureRedirect: "/login",
+            successFlash: true,
+            failureFlash: true
+        }))
         /**
          * Home------------------
          */
+    router.get('/logout', home.checkloggedIn, home.getLogout)
     router.get('/', home.checkloggedIn, home.getHome)
+    router.put('/user/update-password', home.checkloggedIn, user.updatePassword)
 
 
     /**

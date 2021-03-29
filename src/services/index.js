@@ -1,7 +1,9 @@
 const registerService = require("./registerService")
+const userService = require("./userService")
 
 let register = registerService
-
+let user = userService
 module.exports = {
-    register: register
+    register: register,
+    user: user
 }

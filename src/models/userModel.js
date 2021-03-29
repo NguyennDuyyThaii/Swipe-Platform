@@ -31,6 +31,9 @@ UserShema.statics = {
     },
     findUserById(id) {
         return this.findById(id).exec()
+    },
+    updatePassword(id, hashPassword) {
+        return this.findByIdAndUpdate(id, { "local.password": hashPassword }).exec()
     }
 }
 UserShema.methods = {
